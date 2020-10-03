@@ -183,14 +183,13 @@ const mouse = {
 
 #### Jawaban: A
 
-In JavaScript, all object keys are strings (unless it's a Symbol). Even though we might not _type_ them as strings, they are always converted into strings under the hood.
+Dalam Javascript,semua keys object adalah string(kecuali simbol).Meskipun kita tidak _mengetik_ kode itu sebagai string,kode itu akan selalu di konversi menjadi string di belakang layar.
 
-JavaScript interprets (or unboxes) statements. When we use bracket notation, it sees the first opening bracket `[` and keeps going until it finds the closing bracket `]`. Only then, it will evaluate the statement.
+Javascipt interpreter (atau unboxes).Saat kita menggunakan notasi braket(kurung siku[]),interpreter akan melihat braket pertama `[` dan akan terus mencari hingga menemukan braket penutup `[`.dan kemudian interpreter akan mengevaluasi statementnya.
 
-`mouse[bird.size]`: First it evaluates `bird.size`, which is `"small"`. `mouse["small"]` returns `true`
+`mouse[bird.size]`: Pertama interpreter akan mengecek `bird.size`,yang `kecil`,`mouse["small"]` bernilai `true`
 
-However, with dot notation, this doesn't happen. `mouse` does not have a key called `bird`, which means that `mouse.bird` is `undefined`. Then, we ask for the `size` using dot notation: `mouse.bird.size`. Since `mouse.bird` is `undefined`, we're actually asking `undefined.size`. This isn't valid, and will throw an error similar to `Cannot read property "size" of undefined`.
-
+namun,dengan dot(titik) notation,ini tidak terjadi.`mouse` tidak memiliki key yang bernama `bird`,yang berarti `mouse.bird` tidak terdefinisi.Lalu, kita bertanya ukuran dari mouse.bird dengan dot notation: `mouse.bird.size`. tadi `mouse.bird` tidak terdefinisi lalu kita menanyakan `undefined.size`(`size tidak terdefinisi`).ini tidak valid,dan akan mengeluarkan error seperti `Cannot read property "size" of undefined. 
 </p>
 </details>
 
@@ -429,7 +428,7 @@ We said that `this.firstName` equals `"Sarah"` and `this.lastName` equals `"Smit
 
 ---
 
-###### 13. What are the three phases of event propagation?
+###### 13.Sebutkan tiga fase dalam event propogation?
 
 - A: Target > Capturing > Bubbling
 - B: Bubbling > Target > Capturing
